@@ -1,0 +1,23 @@
+package com.itwill.lab05.service;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.itwill.lab05.repository.Post;
+import com.itwill.lab05.repository.PostDao;
+
+public enum PostService {
+	INSTANCE;
+	
+	private static final Logger log = LoggerFactory.getLogger(PostService.class);
+	private final PostDao postDao = PostDao.INSTANCE; 
+	
+	public List<Post> read(){
+		return postDao.select();
+		
+	}
+		
+	
+}

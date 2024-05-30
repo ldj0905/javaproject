@@ -1,0 +1,5 @@
+package com.itwill.lab04.model;
+
+public class Contact {
+
+}

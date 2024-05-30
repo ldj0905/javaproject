@@ -1,0 +1,18 @@
+package com.itwill.lab05.datasource;
+
+import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.logging.LoggerFactory;
+import org.slf4j.Logger;
+
+import com.zaxxer.hikari.HikariDataSource;
+
+
+public class HikariDataSourceTest {
+	private static final Logger log = LoggerFactory.getLogger(HikariDataSourceTest.class);
+	
+	@Test
+	public void test() {
+	private final DataSourceUtil util = DataSourceUtil.getInstance();
+	log.debug("ds = {}", ds);
+	}
+}

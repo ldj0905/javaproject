@@ -1,0 +1,13 @@
+INDEX VERSION 1.134
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1794067522.index
+\lab04_jsp\src\main\java
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3309085189.index
+\lab04_jsp\src\main\java
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2775669642.index
+\lab05_jsp\src\main\java
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\555093021.index
+\lab05_jsp\src\main\java
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2876414108.index
+\lab04_jsp\src\main\java
+C:\study\workspace_web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4128224985.index
+\lab05_jsp\src\main\java

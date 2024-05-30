@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<header>
+    <h1>${pageTitle }</h1> <!--  누군가가 pageTitle을 넘겨줘야함 -->
+</header>

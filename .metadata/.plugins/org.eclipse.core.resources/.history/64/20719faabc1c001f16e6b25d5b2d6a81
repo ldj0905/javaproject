@@ -1,0 +1,15 @@
+package com.itwill.lab05.web;
+
+import org.slf4j.Logger;
+
+import jakarta.servlet.http.HttpServlet;
+
+public class PostListController extends HttpServlet{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Logger log
+
+}

@@ -1,0 +1,9 @@
+package com.itwill.lab05.service;
+
+import org.slf4j.Logger;
+
+public enum PostService {
+	INSTANCE;
+	
+	private static final Logger log = 
+}

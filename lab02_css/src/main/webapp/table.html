@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Psuedo Selector</title>
+         <style> 
+            table#tbl-member, table#tbl-member th, table#tbl-member td{
+                border: 1px solid darkgray; 
+                border-collapse : collapse;
+            }
+            table#tbl-blog{
+                width: 100% /*브라우저에서 사용 가능한 가로 길이의 100%를 사용*/
+                
+            }
+            
+            table#tbl-blog, table#tbl-blog th, table#tbl-blog td{
+                border-bottom: 1px solid black;
+                border-collapse: collapse;
+                
+            }
+            
+            table#tbl-blog th{
+                background-color: darkseagreen;
+                color: white;
+                text-align: left;
+            }
+            
+            table#tbl-blog > tbody > tr:nth-child(odd){
+                background-color: #39c5bb;
+            }
+            table#tbl-blog > tbody > tr:hover{
+                background-color: #999999;
+            }
+        </style>
+	</head>
+	<body>
+		<nav>
+            <a href="index.html">인덱스 페이지</a>
+        </nav>
+        <main>
+            <h1>테이블 스타일</h1>
+            <br/>
+            
+            <table id = "tbl-member">
+                <caption>회원 정보</caption>
+                <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>닉네임</th>
+                        <th>이메일</th>
+                     </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>admin</td>
+                        <td>사람</td>
+                        <td>ejj0905@gmail.com</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td>nimda</td>
+                    <td>사람</td>
+                    <td>ejj0905@gmail.com</td>
+                </tr>
+                </tbody>
+                <tbody>
+                    <td>ejj0905</td>
+                    <td>사람</td>
+                    <td>ejj0905@gmail.com</td>
+                </tbody>
+            </table >
+            <br/> 
+            <table id = "tbl-blog">
+            <caption>블로그</caption>
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>시간</th>
+                 </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>강아지</td>
+                    <td>1호</td>
+                    <td>1:30</td>
+                </tr>
+                </tbody>
+                 <tbody>
+                 <tr>
+                    <td>2</td>
+                    <td>고양이</td>
+                    <td>2호</td>
+                    <td>12:30</td>
+                </tr>
+                </tbody>
+                 <tbody>
+                 <tr>
+                    <td>3</td>
+                    <td>병아리</td>
+                    <td>3호</td>
+                    <td>15:30</td>
+                 </tr>
+                </tbody>
+            </table>
+        </main>
+	</body>
+</html>

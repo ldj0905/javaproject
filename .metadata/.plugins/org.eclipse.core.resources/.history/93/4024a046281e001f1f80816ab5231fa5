@@ -1,0 +1,5 @@
+/**
+ *  /post/modify.jsp 에 포함.
+ */
+
+ console.log('post modify ...');

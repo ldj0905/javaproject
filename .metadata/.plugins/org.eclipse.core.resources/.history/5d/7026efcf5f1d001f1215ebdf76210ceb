@@ -1,0 +1,29 @@
+package com.itwill.lab05.web;
+
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+//HttpServlet 상속받기
+@WebServlet(name = "PostCreateController",urlPatterns = {"/post/create"}) // <<< 얘 왜하는건지 생각좀 해보기
+public class PostCreateController extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	
+	private static final Logger log = LoggerFactory.getLogger(PostCreateController.class); // 얘는 왜 쓰는거고 클래스이름은 왜넣는지
+	
+	
+	//링크를 클릭해서 들어오는거는 GET방식임
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+	
+
+	
+}

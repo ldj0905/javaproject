@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form result</title>
+</head>
+<body>
+    <%@ include file = "header.jspf" %>
+    
+    <h1>폼 양식 제출 결과</h1>
+    <%-- JSP 내장 객체: 
+     --%>
+    <%
+    String username = request.getParameter("username");
+    %>
+    <h2>안녕하세요, <%= username %></h2>
+    
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.itwill.lab05.web;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+@WebServlet(name ="PostDetailsController", urlPatterns = "/post")
+public class PostDetailsController extends HttpServlet{
+
+	private static final long serialVersionUID = 1L;
+
+}

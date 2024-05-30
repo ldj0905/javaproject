@@ -1,0 +1,37 @@
+package com.itwill.lab05.web;
+
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet(name = "PostDeleteController", urlPatterns = "/post/delete" )
+public class PostDeleteController extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	private static final Logger log = LoggerFactory.getLogger(PostDeleteController.class);
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		log.debug("doGet()");
+		//쿼리 문자열에 포함된 요청 파라미터 id 값을 읽음.
+		int id = Integer.parseInt(req.getParameter("id"));
+		log.debug("id ={}" , id);
+		
+		//TODO 서비스 계층의 메서드를 호출 해서 글 삭제 서비스를 실행.
+		
+		//목록 페이지로 이동(redirect)
+		//foward, redirect 현재 보고있는 페이지와 주소가 바뀔것이냐 안바뀔것이냐 리스트 페이지를 보여줘야함 delete라고 남아있으면
+		// 조금 이상함 . 최초 요청 주소와 최종적으로 보는 주소가 달라지면 redirect 라고 생각하면되고, 주소가 같으면 foward
+		// jsp로가면 foward 그이외는 redirect
+		String url = req.getContextPath() + "/post/list";
+	}
+	
+	
+
+}

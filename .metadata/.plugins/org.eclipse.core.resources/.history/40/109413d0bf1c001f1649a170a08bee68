@@ -1,0 +1,10 @@
+package com.itwill.lab05.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public enum PostService {
+	INSTANCE;
+	
+	private static final Logger log = LoggerFactory.getLogger(PostService.class);
+}

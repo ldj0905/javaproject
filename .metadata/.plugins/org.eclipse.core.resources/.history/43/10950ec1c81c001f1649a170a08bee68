@@ -1,0 +1,9 @@
+package com.itwill.lab05.filter;
+
+import jakarta.servlet.http.HttpFilter;
+
+public class CharacterEncodingFilter extends HttpFilter{
+	
+	private static final long serialVersionUID = 1L;
+
+}

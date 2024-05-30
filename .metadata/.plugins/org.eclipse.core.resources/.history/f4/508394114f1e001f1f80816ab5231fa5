@@ -1,0 +1,7 @@
+package com.itwill.lab05.repository;
+
+
+// Model. users 테이블.
+public class User {
+
+}

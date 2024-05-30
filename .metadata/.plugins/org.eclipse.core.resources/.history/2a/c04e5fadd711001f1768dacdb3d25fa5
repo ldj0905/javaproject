@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>자기소개</title>
+
+    <!-- link css file -->
+    <link rel ="stylesheet" href = "css/mystyle3.css" />
+    <style>
+        .menu_item2{
+            font-family:"궁서체";  
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- HTML5 Semantic Layout Tag 
+      o. <header>: 머리말을 지정하는 태그
+      o. <main>: 문서의 메인 컨텐트 영역을 지정하는 태그.
+      o. <nav>: 내비게이션 역할을 하는 태그. 동일한 사이트 안의 문서나 다른 사이트의 문서로 연결하는 링크 모음.
+      o. <section>: 주제별 콘텐츠 영역을 지정하는 태그
+      o. <article>: 독립적인 콘텐츠 내용을 삽입하는 태그
+      o. <aside>: 광고나 링크 모음 등 문서의 메인 내용에 영향을 미치지 않는 내용들을 넣을 때 사용하는 태그.
+      o. <footer>: 꼬리말(제작 정보)를 나타내는 태그
+    -->
+
+    <header id="top">
+        <img alt="대상혁상시숭배" src="images/대상혁.jpg" align="left">
+        <h1>이동준의 블로그</h1>
+        <p>hi</p>
+    </header>
+
+    <div class="wrapper">
+        <nav id="menu_bar">
+            <ul id="menu_list">
+                <li class="menu_item">
+                    <a class="mylink" href="https://www.mnd.go.kr/mbshome/mbs/mnd/index.jsp">국방부</a>
+                </li>
+                <li class="menu_item" >
+                    <a class="mylink" href="https://www.whitehouse.gov/">백악관</a>
+                </li>
+                <li class="menu_item2" >
+                    <a class="mylink" href="http://warning.or.kr/" >우리민족끼리</a>
+                </li>
+                <li class="menu_item">
+                    <a class="mylink" href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0">네이버 블로그</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section id="main"> 
+                <article>
+                    <h1 align="center">좋아하는 음식</h1>
+                    <p align="center" >
+                        <img alt="시카고피자" src="images/pizza.jpg" />
+                        <br/>
+                        시카고 피자
+                    </p>
+                </article>
+                <article>
+                    <h1 align="center">취미</h1>
+                    <p align ="center">
+                    <img alt= "ZF " src= "images/ZF.jpg"/>
+                    <br/>
+                        사진찍기
+                        <br/>
+                        
+                        
+                        <img alt= "배드민턴 " src= "images/배드민턴.jpg"/>
+                        <br/>
+                        배드민턴
+                        <br />
+                       
+                    </p>
+                </article>
+                <article>
+                    <h1></h1>
+                    <p>
+                        
+                        <br />
+                        
+                    </p>
+                </article>
+            </section>
+        </main>
+        <aside id="sidebar">
+            <img alt="image" src="images/image01.jpg" />
+            <img alt="image" src="images/image02.jpg" />
+            <img alt="image" src="images/image03.jpg" />
+            <img alt="image" src="images/image04.jpg" />
+            <img alt="image" src="images/image05.jpg" />
+        </aside>
+    </div>
+
+    <footer id="bottom">끝</footer>
+</body>
+
+</html>

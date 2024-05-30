@@ -1,0 +1,9 @@
+/**
+ *  /post/modify.jsp 에 포함.
+ */
+
+ document.addEventListener('DOMContentLoaded',() = {
+    
+ });
+ 
+ 
