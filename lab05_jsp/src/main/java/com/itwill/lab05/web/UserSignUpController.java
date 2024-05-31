@@ -14,31 +14,39 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet (name = "userSignUpController", urlPatterns = {"/user/signup"})
-public class UserSignUpController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private static final Logger log = LoggerFactory.getLogger(UserSignUpController.class);
-	//controller는 service를 호출한다.
-	
-	private final UserService userService = UserService.INSTANCE;
-	//TODO: 회원 가입에 필요한 요청 처리 메서드.
-	
-	
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		log.debug("doGet()");
-		req.getRequestDispatcher("/WEB-INF/views/user/signup.jsp").forward(req, resp);
-	}
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
-		log.debug("doPost");
-		String userid = req.getParameter("userid");
-		String password = req.getParameter("password");
-		String email = req.getParameter("email");
-		User user = User.builder().userid(userid).password(password).email(email).build();
-		
-		userService.create(user);
-		String url = req.getContextPath() + "/signin";
-		resp.sendRedirect(url);
-	}
+@WebServlet(name = "userSignUpController", urlPatterns = {"/user/signup"})
+public class UserSignUpController extends HttpServlet{
+   private static final long serialVersionUID = 1L;
+   private static final Logger log = LoggerFactory.getLogger(UserSignUpController.class);
+   private final UserService userService = UserService.INSTANCE;
+   
+   //회원 가입에 필요한 요청 처리 메서드
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      log.debug("doGet()");
+      req.getRequestDispatcher("/WEB-INF/views/user/signup.jsp").forward(req, resp);
+      
+   }
+   
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      log.debug("doPost()");
+      //user 만들기
+      String userid = req.getParameter("userid");
+      String password = req.getParameter("password");
+      String email = req.getParameter("email");
+      User user = User.builder().email(email).userid(userid).password(password).build();
+      log.debug("user 생성 {}",user);
+      
+      //service 이용해서 insert
+      userService.createAccount(user);
+      
+      //로그인 화면으로 가기
+      String url = req.getContextPath()+"/user/signin";
+//      String url = req.getContextPath();
+      log.debug("url = {}",url);
+      resp.sendRedirect(url);
+      
+   }
+
 }
