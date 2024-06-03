@@ -37,10 +37,10 @@
                                 type="text" value="${post.title}"
                                 readonly />
                         </div>
-                        <div >
-                            <label for="content" class="form-label" >글내용</label>
+                        <div>
+                            <label for="content" class="form-label">글내용</label>
                             <textarea id="content" class="form-control"
-                                readonly> ${post.content}" </textarea>
+                                readonly>${post.content}</textarea>
                         </div>
                         <div>
                             <label for="author" class="form-label">작성자</label>
@@ -62,12 +62,15 @@
                         </div>
                     </form>
                 </div>
-                <div class ="card-footer">
-                    <c:url var="postModifyPage" value="/post/modify">
-                        <c:param name="id" value="${post.id }"/>
-                    </c:url>
-                    <a class = "btn btn-outline-primary" href="${postModifyPage}" >수정하기</a>
-                </div>
+                <c:if test="${post.author eq signedInUser}"> <!-- 와 시바 개쩐다 작성자랑 동일한지 확인한후에 수정버튼나오게 하는거 -->
+                    <div class="card-footer">
+                        <c:url var="postModifyPage" value="/post/modify">
+                            <c:param name="id" value="${post.id }" />
+                        </c:url>
+                        <a class="btn btn-outline-primary"
+                            href="${postModifyPage}">수정하기</a>
+                    </div>
+                </c:if>
             </div>
         </main>
     </div>

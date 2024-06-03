@@ -14,36 +14,39 @@
 </head>
 <body>
     <div class="container-fluid">
-        <c:set var="pageTitle" value="New Post" scope="page" />
+        <c:set var="pageTitle" value="User Profile" scope="page" />
         <%@ include file="../fragments/header.jspf" %>
         
         <main>
-            <div class="mt-2 card">
+            <div class="card mt-2">
                 <div class="card-header">
-                    <h2>새 글 작성</h2>
+                    <h2>내 정보</h2>
                 </div>
                 <div class="card-body">
-                    <c:url var="newPostPage" value="/post/create" />
-                    <form method="post" action="${newPostPage}">
+                    <form>
                         <div class="mt-2">
-                            <input class="form-control" 
-                                type="text" name="title" placeholder="제목"
-                                required autofocus />
+                            <label class="form-label" for="userid">User ID</label>
+                            <input class="form-control" id="userid"
+                                type="text" name="userid" value="${user.userid}" readonly />
                         </div>
                         <div class="mt-2">
-                            <textarea class="form-control" 
-                                rows="5" name="content" placeholder="내용" required></textarea>
-                        </div>
-                        <div class="mt-2 d-none">
-                            <input class="form-control" 
-                                type="text" name="author" value="${signedInUser}" readonly />
+                            <label class="form-label" for="password">비밀번호</label>
+                            <input class="form-control" id="password"
+                                type="text" name="password" value="${user.password}" readonly />
                         </div>
                         <div class="mt-2">
-                            <input class="form-control btn btn-outline-success" 
-                                type="submit" value="저장" />
+                            <label class="form-label" for="email">이메일</label>
+                            <input class="form-control" id="email"
+                                type="email" name="email" value="${user.email}" readonly />
+                        </div>
+                        <div class="mt-2">
+                            <label class="form-label" for="points">포인트</label>
+                            <input class="form-control" id="points"
+                                type="text" value="${user.points}" readonly />
                         </div>
                     </form>
                 </div>
+                <div class="card-footer"></div>
             </div>
         </main>
     </div>
