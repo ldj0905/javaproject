@@ -17,6 +17,35 @@
     <header>
         <h1>Home</h1>
         <h2>${now}</h2>
+       <!--   <img alt = "bridge" src="/spring1/images/bridge.jpg">-->
+            <!-- img alt = "bridge" src= "./images/bridge.jpg" /-->
+            <c:url var = "bridge" value ="/images/bridge.jpg" />
+            <img alt = "동작대교" src="${bridge }" />
+         <main>
+        <h1>Contents</h1>
+        <nav>
+            <ul>
+                <li>
+                    <c:url var="exPage" value="/example"/>
+                    <a href="${exPage}">컨트롤러 예제</a>
+                </li>
+                <li>
+                    <c:url var="testPage" value="/test"/>
+                    <a href="${testPage }">테스트 페이지</a>
+                </li>
+                <li>
+                    <c:url var="forwardPage" value="test2" />
+                    <a href="${forwardPage}">포워드</a>
+                </li>
+                <li>
+                    <c:url var = "redirectPage" value="/test3"/>
+                    <a href="${redirectPage }">리다이렉트</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </main>
+        
     </header>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
