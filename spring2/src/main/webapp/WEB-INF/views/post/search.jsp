@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <c:set var="pageTitle" value="Post List" />
+        <c:set var="pageTitle" value="검색결과" />
         <%@ include file="../fragments/header.jspf"%>
 
         <main>
