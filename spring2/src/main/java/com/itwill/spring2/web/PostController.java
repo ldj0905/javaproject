@@ -42,7 +42,7 @@ public class PostController {
 	@GetMapping("/search")
 	public void search(PostSearchDto dto, Model model) {
 		log.debug("search()");
-		List<PostSearchDto> search = postService.search(dto);
+		List<PostListDto> search = postService.search(dto);
 		model.addAttribute("posts", search);
 	}
 

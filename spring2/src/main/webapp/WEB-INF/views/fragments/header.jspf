@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<header class="mt-2 p-4 bg-primary text-white text-center">
+<header class="mt-2 p-4 bg-info text-white text-center">
     <h1>${pageTitle}</h1>
 </header>
 

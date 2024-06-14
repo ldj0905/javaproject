@@ -135,6 +135,12 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
         </dependency>
+        <!-- Add-on module to support JSR-310 (Java 8 Date & Time API) data types -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
 
         <!-- Spice up your java: Automatic Resource Management, automatic
         generation of 
@@ -146,7 +152,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Spring jDBC -->
+        <!-- Sping JDBC -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -160,11 +166,13 @@
             <version>${spring-version}</version>
         </dependency>
 
+        <!-- MyBatis SQL mapper framework -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>${mybatis-version}</version>
         </dependency>
+
         <!-- An easy-to-use Spring bridge for MyBatis SQL mapper framework -->
         <dependency>
             <groupId>org.mybatis</groupId>

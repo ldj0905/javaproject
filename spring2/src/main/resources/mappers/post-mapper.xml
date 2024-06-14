@@ -38,11 +38,11 @@
 
     <!-- posts 테이블에서 제목/내용/작성자로 검색 -->
     <select id="search" resultType="Post">
-        <bind name="searchKeyword" value="'%' + keyword + '%'" />
+        <bind name="searchKeyword" value="'%' + keyword + '%'" /> <!-- PostSearchDto.getkeyword  getter 부르기-->
         select * from posts
         <where>
             <choose>
-                <when test='category.equals("t")'>
+                <when test='category.equals("t")'>  <!-- PostSearchDto.getcategory getter 부르기 -->
                     upper(title) like
                     upper(#{searchKeyword})
                 </when>
@@ -63,6 +63,6 @@
                 </when>
             </choose>
         </where>
+        order by id desc
     </select>
-
 </mapper>
