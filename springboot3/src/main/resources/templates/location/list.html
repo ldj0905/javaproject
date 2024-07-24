@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Sprint Boot3</title>
+<style>
+tbody {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div th:replace="~{/layout/fragments :: pageHeader('위치 목록 페이지')}"></div>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>주소</th>
+                    <th>코드</th>
+                    <th>도시</th>
+                    <th>행정구역</th>
+                    <th>나라</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="loc : ${locations}" th:object="${loc}">
+
+                    <td th:text="*{streetAddress}"></td>
+                    <td th:text="*{postalCode}"></td>
+                    <td th:text="*{city}"></td>
+
+                    <td><th:block th:if="*{stateProvince != null}">
+                            <a th:text="*{stateProvince}"></a>
+                        </th:block></td>
+                    <td><a
+                        th:href="@{/country/details/{id}(id=*{country.id})}"
+                        th:text="*{country.id}"></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
